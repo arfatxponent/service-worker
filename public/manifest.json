@@ -1,0 +1,44 @@
+{
+  "name": "Testing Pwa",
+  "short_name": "PWA",
+  "theme_color": "rgb(30, 157, 241)",
+  "background_color": "#fff",
+  "display": "browser",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
