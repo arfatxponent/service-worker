@@ -7,5 +7,11 @@ export default function PWAInstallButton() {
 
   if (!isInstallable) return null; // Hide if not installable
 
-  return <Button onClick={installApp}>Install App</Button>;
+  return (
+    <>
+      <main className="container mx-auto bg-accent">
+        <Button onClick={installApp}>Install App</Button>
+      </main>
+    </>
+  );
 }

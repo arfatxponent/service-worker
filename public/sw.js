@@ -21,16 +21,22 @@ self.addEventListener("activate", (event) => {
   );
   self.clients.claim();
 });
-
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches
-      .match(event.request)
-      .then((response) => response || fetch(event.request))
+    fetch(event.request)
+      .then((networkResponse) => {
+        // Optionally update cache
+        if (event.request.method === "GET") {
+          caches
+            .open(CACHE_NAME)
+            .then((cache) => cache.put(event.request, networkResponse.clone()));
+        }
+        return networkResponse;
+      })
       .catch(() =>
         caches.match(event.request).then((cachedResponse) => {
           if (cachedResponse) return cachedResponse;
-          // Fallback for non-cached pages
+          // Fallback page
           return caches.match("/offline.html");
         })
       )
