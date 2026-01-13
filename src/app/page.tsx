@@ -9,7 +9,7 @@ export default function PWAInstallButton() {
 
   return (
     <>
-      <main className="container mx-auto bg-accent">
+      <main className="container mx-auto bg-accent mt-5">
         <Button onClick={installApp}>Install App</Button>
       </main>
     </>
