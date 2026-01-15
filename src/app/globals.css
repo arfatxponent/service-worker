@@ -121,6 +121,10 @@
   --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0);
 }
 
+@theme {
+  --animate-collapse: collapse 0.2s ease-out;
+  --animate-expand: expand 0.2s ease-out;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -180,5 +184,26 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+@keyframes collapse {
+  from {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes expand {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
   }
 }
