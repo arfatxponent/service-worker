@@ -211,3 +211,34 @@
     opacity: 1;
   }
 }
+
+/* ============================================
+   Scrollbar Customization
+   ============================================ */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(30, 157, 241) rgb(15, 23, 42); /* Blue Thumb, Slate Track */
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(15, 23, 42); /* Very dark slate background */
+  border-radius: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(30, 157, 241); /* Bright Blue */
+  border-radius: 6px;
+  border: 2px solid rgb(15, 23, 42); /* Spacing effect */
+  transition: background-color 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(56, 189, 248); /* Lighter Blue on hover */
+}

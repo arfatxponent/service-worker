@@ -16,6 +16,11 @@ export const megaMenuData: MegaMenuData = {
           href: "/state/use-callback",
           description: "Track your metrics in real-time",
         },
+        {
+          label: "Use Memo",
+          href: "/state/use-memo",
+          description: "Track your metrics in real-time",
+        },
       ],
     },
   ],
