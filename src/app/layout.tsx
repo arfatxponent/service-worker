@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegistrar";
 import GlobalOnlineStatus from "@/components/GlobalOnlineStatus";
+import { WebVitals } from "@/components/web-vitals";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <WebVitals />
         <ServiceWorkerRegister />
         <GlobalOnlineStatus />
         {children}
