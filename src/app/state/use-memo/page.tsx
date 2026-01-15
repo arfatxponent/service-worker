@@ -1,4 +1,5 @@
 import CalculateDataViaUseMemo from "@/components/ui/use-memo/calculate-data";
+import UseMemoGuide from "@/components/ui/use-memo/use-memo-guide";
 import { Metadata } from "next";
 import React from "react";
 
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
 const UseMemoPage = () => {
   return (
     <div>
+      <UseMemoGuide />
       <CalculateDataViaUseMemo />
     </div>
   );
