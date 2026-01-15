@@ -39,7 +39,7 @@ export default function RootLayout({
         <ServiceWorkerRegister />
         <GlobalOnlineStatus />
         <Header />
-        <main className="container mx-auto">{children}</main>
+        {children}
       </body>
     </html>
   );
